@@ -1,0 +1,475 @@
+﻿<Window x:Class="Life.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Life"
+        mc:Ignorable="d"
+        Title="Project 'Life'" Height="900" Width="1250" Foreground="White" WindowStartupLocation="CenterScreen" >
+    <Window.Resources>
+        <LinearGradientBrush x:Key="GradientStyle" StartPoint="0.9,1" EndPoint="0.5,0">
+            <GradientStop Color="LightBlue" Offset="0" />
+            <GradientStop Color="#FF6273AA" Offset="1" />
+        </LinearGradientBrush>
+    </Window.Resources>
+    <Grid Background="{StaticResource GradientStyle}">
+        <Grid Height="35" VerticalAlignment="Top" Background="#FF6273AA" Grid.ColumnSpan="2">
+            <Grid.Effect>
+                <DropShadowEffect BlurRadius="1" ShadowDepth="1" Color="#FFACACAC"/>
+            </Grid.Effect>
+            <TextBlock x:Name="gameName" Text="Проект 'Жизнь'" FontSize="25"></TextBlock>
+        </Grid>
+        
+        <Grid HorizontalAlignment="Left" Width="800" Height="800" VerticalAlignment="Top" Margin="40,46,0,0" x:Name="TheGrid" ShowGridLines="True">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid x:Name="r0c0" Grid.Row="0" Grid.Column="0" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r0c1" Grid.Row="0" Grid.Column="1" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r0c2" Grid.Row="0" Grid.Column="2" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r0c3" Grid.Row="0" Grid.Column="3" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r0c4" Grid.Row="0" Grid.Column="4" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r0c5" Grid.Row="0" Grid.Column="5" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r0c6" Grid.Row="0" Grid.Column="6" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r0c7" Grid.Row="0" Grid.Column="7" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r0c8" Grid.Row="0" Grid.Column="8" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r0c9" Grid.Row="0" Grid.Column="9" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r0c10" Grid.Row="0" Grid.Column="10" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r0c11" Grid.Row="0" Grid.Column="11" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r0c12" Grid.Row="0" Grid.Column="12" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r0c13" Grid.Row="0" Grid.Column="13" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r0c14" Grid.Row="0" Grid.Column="14" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r0c15" Grid.Row="0" Grid.Column="15" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r0c16" Grid.Row="0" Grid.Column="16" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r0c17" Grid.Row="0" Grid.Column="17" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r0c18" Grid.Row="0" Grid.Column="18" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r0c19" Grid.Row="0" Grid.Column="19" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r1c0" Grid.Row="1" Grid.Column="0" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r1c1" Grid.Row="1" Grid.Column="1" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r1c2" Grid.Row="1" Grid.Column="2" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r1c3" Grid.Row="1" Grid.Column="3" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r1c4" Grid.Row="1" Grid.Column="4" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r1c5" Grid.Row="1" Grid.Column="5" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r1c6" Grid.Row="1" Grid.Column="6" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r1c7" Grid.Row="1" Grid.Column="7" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r1c8" Grid.Row="1" Grid.Column="8" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r1c9" Grid.Row="1" Grid.Column="9" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r1c10" Grid.Row="1" Grid.Column="10" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r1c11" Grid.Row="1" Grid.Column="11" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r1c12" Grid.Row="1" Grid.Column="12" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r1c13" Grid.Row="1" Grid.Column="13" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r1c14" Grid.Row="1" Grid.Column="14" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r1c15" Grid.Row="1" Grid.Column="15" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r1c16" Grid.Row="1" Grid.Column="16" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r1c17" Grid.Row="1" Grid.Column="17" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r1c18" Grid.Row="1" Grid.Column="18" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r1c19" Grid.Row="1" Grid.Column="19" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r2c0" Grid.Row="2" Grid.Column="0" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r2c1" Grid.Row="2" Grid.Column="1" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r2c2" Grid.Row="2" Grid.Column="2" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r2c3" Grid.Row="2" Grid.Column="3" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r2c4" Grid.Row="2" Grid.Column="4" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r2c5" Grid.Row="2" Grid.Column="5" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r2c6" Grid.Row="2" Grid.Column="6" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r2c7" Grid.Row="2" Grid.Column="7" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r2c8" Grid.Row="2" Grid.Column="8" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r2c9" Grid.Row="2" Grid.Column="9" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r2c10" Grid.Row="2" Grid.Column="10" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r2c11" Grid.Row="2" Grid.Column="11" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r2c12" Grid.Row="2" Grid.Column="12" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r2c13" Grid.Row="2" Grid.Column="13" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r2c14" Grid.Row="2" Grid.Column="14" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r2c15" Grid.Row="2" Grid.Column="15" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r2c16" Grid.Row="2" Grid.Column="16" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r2c17" Grid.Row="2" Grid.Column="17" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r2c18" Grid.Row="2" Grid.Column="18" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r2c19" Grid.Row="2" Grid.Column="19" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r3c0" Grid.Row="3" Grid.Column="0" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r3c1" Grid.Row="3" Grid.Column="1" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r3c2" Grid.Row="3" Grid.Column="2" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r3c3" Grid.Row="3" Grid.Column="3" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r3c4" Grid.Row="3" Grid.Column="4" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r3c5" Grid.Row="3" Grid.Column="5" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r3c6" Grid.Row="3" Grid.Column="6" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r3c7" Grid.Row="3" Grid.Column="7" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r3c8" Grid.Row="3" Grid.Column="8" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r3c9" Grid.Row="3" Grid.Column="9" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r3c10" Grid.Row="3" Grid.Column="10" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r3c11" Grid.Row="3" Grid.Column="11" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r3c12" Grid.Row="3" Grid.Column="12" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r3c13" Grid.Row="3" Grid.Column="13" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r3c14" Grid.Row="3" Grid.Column="14" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r3c15" Grid.Row="3" Grid.Column="15" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r3c16" Grid.Row="3" Grid.Column="16" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r3c17" Grid.Row="3" Grid.Column="17" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r3c18" Grid.Row="3" Grid.Column="18" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r3c19" Grid.Row="3" Grid.Column="19" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r4c0" Grid.Row="4" Grid.Column="0" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r4c1" Grid.Row="4" Grid.Column="1" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r4c2" Grid.Row="4" Grid.Column="2" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r4c3" Grid.Row="4" Grid.Column="3" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r4c4" Grid.Row="4" Grid.Column="4" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r4c5" Grid.Row="4" Grid.Column="5" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r4c6" Grid.Row="4" Grid.Column="6" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r4c7" Grid.Row="4" Grid.Column="7" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r4c8" Grid.Row="4" Grid.Column="8" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r4c9" Grid.Row="4" Grid.Column="9" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r4c10" Grid.Row="4" Grid.Column="10" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r4c11" Grid.Row="4" Grid.Column="11" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r4c12" Grid.Row="4" Grid.Column="12" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r4c13" Grid.Row="4" Grid.Column="13" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r4c14" Grid.Row="4" Grid.Column="14" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r4c15" Grid.Row="4" Grid.Column="15" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r4c16" Grid.Row="4" Grid.Column="16" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r4c17" Grid.Row="4" Grid.Column="17" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r4c18" Grid.Row="4" Grid.Column="18" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r4c19" Grid.Row="4" Grid.Column="19" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r5c0" Grid.Row="5" Grid.Column="0" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r5c1" Grid.Row="5" Grid.Column="1" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r5c2" Grid.Row="5" Grid.Column="2" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r5c3" Grid.Row="5" Grid.Column="3" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r5c4" Grid.Row="5" Grid.Column="4" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r5c5" Grid.Row="5" Grid.Column="5" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r5c6" Grid.Row="5" Grid.Column="6" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r5c7" Grid.Row="5" Grid.Column="7" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r5c8" Grid.Row="5" Grid.Column="8" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r5c9" Grid.Row="5" Grid.Column="9" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r5c10" Grid.Row="5" Grid.Column="10" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r5c11" Grid.Row="5" Grid.Column="11" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r5c12" Grid.Row="5" Grid.Column="12" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r5c13" Grid.Row="5" Grid.Column="13" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r5c14" Grid.Row="5" Grid.Column="14" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r5c15" Grid.Row="5" Grid.Column="15" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r5c16" Grid.Row="5" Grid.Column="16" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r5c17" Grid.Row="5" Grid.Column="17" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r5c18" Grid.Row="5" Grid.Column="18" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r5c19" Grid.Row="5" Grid.Column="19" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r6c0" Grid.Row="6" Grid.Column="0" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r6c1" Grid.Row="6" Grid.Column="1" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r6c2" Grid.Row="6" Grid.Column="2" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r6c3" Grid.Row="6" Grid.Column="3" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r6c4" Grid.Row="6" Grid.Column="4" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r6c5" Grid.Row="6" Grid.Column="5" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r6c6" Grid.Row="6" Grid.Column="6" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r6c7" Grid.Row="6" Grid.Column="7" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r6c8" Grid.Row="6" Grid.Column="8" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r6c9" Grid.Row="6" Grid.Column="9" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r6c10" Grid.Row="6" Grid.Column="10" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r6c11" Grid.Row="6" Grid.Column="11" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r6c12" Grid.Row="6" Grid.Column="12" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r6c13" Grid.Row="6" Grid.Column="13" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r6c14" Grid.Row="6" Grid.Column="14" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r6c15" Grid.Row="6" Grid.Column="15" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r6c16" Grid.Row="6" Grid.Column="16" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r6c17" Grid.Row="6" Grid.Column="17" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r6c18" Grid.Row="6" Grid.Column="18" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r6c19" Grid.Row="6" Grid.Column="19" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r7c0" Grid.Row="7" Grid.Column="0" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r7c1" Grid.Row="7" Grid.Column="1" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r7c2" Grid.Row="7" Grid.Column="2" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r7c3" Grid.Row="7" Grid.Column="3" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r7c4" Grid.Row="7" Grid.Column="4" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r7c5" Grid.Row="7" Grid.Column="5" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r7c6" Grid.Row="7" Grid.Column="6" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r7c7" Grid.Row="7" Grid.Column="7" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r7c8" Grid.Row="7" Grid.Column="8" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r7c9" Grid.Row="7" Grid.Column="9" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r7c10" Grid.Row="7" Grid.Column="10" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r7c11" Grid.Row="7" Grid.Column="11" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r7c12" Grid.Row="7" Grid.Column="12" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r7c13" Grid.Row="7" Grid.Column="13" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r7c14" Grid.Row="7" Grid.Column="14" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r7c15" Grid.Row="7" Grid.Column="15" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r7c16" Grid.Row="7" Grid.Column="16" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r7c17" Grid.Row="7" Grid.Column="17" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r7c18" Grid.Row="7" Grid.Column="18" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r7c19" Grid.Row="7" Grid.Column="19" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r8c0" Grid.Row="8" Grid.Column="0" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r8c1" Grid.Row="8" Grid.Column="1" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r8c2" Grid.Row="8" Grid.Column="2" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r8c3" Grid.Row="8" Grid.Column="3" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r8c4" Grid.Row="8" Grid.Column="4" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r8c5" Grid.Row="8" Grid.Column="5" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r8c6" Grid.Row="8" Grid.Column="6" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r8c7" Grid.Row="8" Grid.Column="7" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r8c8" Grid.Row="8" Grid.Column="8" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r8c9" Grid.Row="8" Grid.Column="9" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r8c10" Grid.Row="8" Grid.Column="10" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r8c11" Grid.Row="8" Grid.Column="11" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r8c12" Grid.Row="8" Grid.Column="12" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r8c13" Grid.Row="8" Grid.Column="13" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r8c14" Grid.Row="8" Grid.Column="14" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r8c15" Grid.Row="8" Grid.Column="15" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r8c16" Grid.Row="8" Grid.Column="16" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r8c17" Grid.Row="8" Grid.Column="17" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r8c18" Grid.Row="8" Grid.Column="18" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r8c19" Grid.Row="8" Grid.Column="19" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r9c0" Grid.Row="9" Grid.Column="0" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r9c1" Grid.Row="9" Grid.Column="1" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r9c2" Grid.Row="9" Grid.Column="2" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r9c3" Grid.Row="9" Grid.Column="3" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r9c4" Grid.Row="9" Grid.Column="4" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r9c5" Grid.Row="9" Grid.Column="5" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r9c6" Grid.Row="9" Grid.Column="6" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r9c7" Grid.Row="9" Grid.Column="7" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r9c8" Grid.Row="9" Grid.Column="8" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r9c9" Grid.Row="9" Grid.Column="9" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r9c10" Grid.Row="9" Grid.Column="10" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r9c11" Grid.Row="9" Grid.Column="11" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r9c12" Grid.Row="9" Grid.Column="12" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r9c13" Grid.Row="9" Grid.Column="13" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r9c14" Grid.Row="9" Grid.Column="14" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r9c15" Grid.Row="9" Grid.Column="15" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r9c16" Grid.Row="9" Grid.Column="16" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r9c17" Grid.Row="9" Grid.Column="17" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r9c18" Grid.Row="9" Grid.Column="18" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r9c19" Grid.Row="9" Grid.Column="19" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r10c0" Grid.Row="10" Grid.Column="0" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r10c1" Grid.Row="10" Grid.Column="1" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r10c2" Grid.Row="10" Grid.Column="2" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r10c3" Grid.Row="10" Grid.Column="3" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r10c4" Grid.Row="10" Grid.Column="4" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r10c5" Grid.Row="10" Grid.Column="5" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r10c6" Grid.Row="10" Grid.Column="6" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r10c7" Grid.Row="10" Grid.Column="7" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r10c8" Grid.Row="10" Grid.Column="8" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r10c9" Grid.Row="10" Grid.Column="9" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r10c10" Grid.Row="10" Grid.Column="10" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r10c11" Grid.Row="10" Grid.Column="11" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r10c12" Grid.Row="10" Grid.Column="12" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r10c13" Grid.Row="10" Grid.Column="13" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r10c14" Grid.Row="10" Grid.Column="14" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r10c15" Grid.Row="10" Grid.Column="15" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r10c16" Grid.Row="10" Grid.Column="16" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r10c17" Grid.Row="10" Grid.Column="17" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r10c18" Grid.Row="10" Grid.Column="18" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r10c19" Grid.Row="10" Grid.Column="19" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r11c0" Grid.Row="11" Grid.Column="0" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r11c1" Grid.Row="11" Grid.Column="1" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r11c2" Grid.Row="11" Grid.Column="2" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r11c3" Grid.Row="11" Grid.Column="3" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r11c4" Grid.Row="11" Grid.Column="4" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r11c5" Grid.Row="11" Grid.Column="5" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r11c6" Grid.Row="11" Grid.Column="6" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r11c7" Grid.Row="11" Grid.Column="7" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r11c8" Grid.Row="11" Grid.Column="8" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r11c9" Grid.Row="11" Grid.Column="9" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r11c10" Grid.Row="11" Grid.Column="10" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r11c11" Grid.Row="11" Grid.Column="11" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r11c12" Grid.Row="11" Grid.Column="12" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r11c13" Grid.Row="11" Grid.Column="13" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r11c14" Grid.Row="11" Grid.Column="14" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r11c15" Grid.Row="11" Grid.Column="15" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r11c16" Grid.Row="11" Grid.Column="16" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r11c17" Grid.Row="11" Grid.Column="17" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r11c18" Grid.Row="11" Grid.Column="18" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r11c19" Grid.Row="11" Grid.Column="19" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r12c0" Grid.Row="12" Grid.Column="0" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r12c1" Grid.Row="12" Grid.Column="1" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r12c2" Grid.Row="12" Grid.Column="2" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r12c3" Grid.Row="12" Grid.Column="3" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r12c4" Grid.Row="12" Grid.Column="4" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r12c5" Grid.Row="12" Grid.Column="5" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r12c6" Grid.Row="12" Grid.Column="6" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r12c7" Grid.Row="12" Grid.Column="7" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r12c8" Grid.Row="12" Grid.Column="8" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r12c9" Grid.Row="12" Grid.Column="9" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r12c10" Grid.Row="12" Grid.Column="10" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r12c11" Grid.Row="12" Grid.Column="11" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r12c12" Grid.Row="12" Grid.Column="12" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r12c13" Grid.Row="12" Grid.Column="13" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r12c14" Grid.Row="12" Grid.Column="14" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r12c15" Grid.Row="12" Grid.Column="15" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r12c16" Grid.Row="12" Grid.Column="16" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r12c17" Grid.Row="12" Grid.Column="17" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r12c18" Grid.Row="12" Grid.Column="18" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r12c19" Grid.Row="12" Grid.Column="19" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r13c0" Grid.Row="13" Grid.Column="0" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r13c1" Grid.Row="13" Grid.Column="1" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r13c2" Grid.Row="13" Grid.Column="2" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r13c3" Grid.Row="13" Grid.Column="3" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r13c4" Grid.Row="13" Grid.Column="4" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r13c5" Grid.Row="13" Grid.Column="5" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r13c6" Grid.Row="13" Grid.Column="6" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r13c7" Grid.Row="13" Grid.Column="7" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r13c8" Grid.Row="13" Grid.Column="8" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r13c9" Grid.Row="13" Grid.Column="9" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r13c10" Grid.Row="13" Grid.Column="10" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r13c11" Grid.Row="13" Grid.Column="11" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r13c12" Grid.Row="13" Grid.Column="12" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r13c13" Grid.Row="13" Grid.Column="13" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r13c14" Grid.Row="13" Grid.Column="14" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r13c15" Grid.Row="13" Grid.Column="15" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r13c16" Grid.Row="13" Grid.Column="16" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r13c17" Grid.Row="13" Grid.Column="17" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r13c18" Grid.Row="13" Grid.Column="18" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r13c19" Grid.Row="13" Grid.Column="19" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r14c0" Grid.Row="14" Grid.Column="0" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r14c1" Grid.Row="14" Grid.Column="1" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r14c2" Grid.Row="14" Grid.Column="2" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r14c3" Grid.Row="14" Grid.Column="3" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r14c4" Grid.Row="14" Grid.Column="4" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r14c5" Grid.Row="14" Grid.Column="5" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r14c6" Grid.Row="14" Grid.Column="6" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r14c7" Grid.Row="14" Grid.Column="7" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r14c8" Grid.Row="14" Grid.Column="8" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r14c9" Grid.Row="14" Grid.Column="9" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r14c10" Grid.Row="14" Grid.Column="10" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r14c11" Grid.Row="14" Grid.Column="11" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r14c12" Grid.Row="14" Grid.Column="12" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r14c13" Grid.Row="14" Grid.Column="13" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r14c14" Grid.Row="14" Grid.Column="14" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r14c15" Grid.Row="14" Grid.Column="15" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r14c16" Grid.Row="14" Grid.Column="16" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r14c17" Grid.Row="14" Grid.Column="17" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r14c18" Grid.Row="14" Grid.Column="18" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r14c19" Grid.Row="14" Grid.Column="19" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r15c0" Grid.Row="15" Grid.Column="0" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r15c1" Grid.Row="15" Grid.Column="1" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r15c2" Grid.Row="15" Grid.Column="2" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r15c3" Grid.Row="15" Grid.Column="3" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r15c4" Grid.Row="15" Grid.Column="4" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r15c5" Grid.Row="15" Grid.Column="5" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r15c6" Grid.Row="15" Grid.Column="6" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r15c7" Grid.Row="15" Grid.Column="7" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r15c8" Grid.Row="15" Grid.Column="8" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r15c9" Grid.Row="15" Grid.Column="9" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r15c10" Grid.Row="15" Grid.Column="10" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r15c11" Grid.Row="15" Grid.Column="11" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r15c12" Grid.Row="15" Grid.Column="12" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r15c13" Grid.Row="15" Grid.Column="13" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r15c14" Grid.Row="15" Grid.Column="14" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r15c15" Grid.Row="15" Grid.Column="15" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r15c16" Grid.Row="15" Grid.Column="16" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r15c17" Grid.Row="15" Grid.Column="17" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r15c18" Grid.Row="15" Grid.Column="18" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r15c19" Grid.Row="15" Grid.Column="19" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r16c0" Grid.Row="16" Grid.Column="0" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r16c1" Grid.Row="16" Grid.Column="1" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r16c2" Grid.Row="16" Grid.Column="2" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r16c3" Grid.Row="16" Grid.Column="3" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r16c4" Grid.Row="16" Grid.Column="4" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r16c5" Grid.Row="16" Grid.Column="5" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r16c6" Grid.Row="16" Grid.Column="6" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r16c7" Grid.Row="16" Grid.Column="7" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r16c8" Grid.Row="16" Grid.Column="8" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r16c9" Grid.Row="16" Grid.Column="9" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r16c10" Grid.Row="16" Grid.Column="10" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r16c11" Grid.Row="16" Grid.Column="11" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r16c12" Grid.Row="16" Grid.Column="12" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r16c13" Grid.Row="16" Grid.Column="13" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r16c14" Grid.Row="16" Grid.Column="14" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r16c15" Grid.Row="16" Grid.Column="15" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r16c16" Grid.Row="16" Grid.Column="16" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r16c17" Grid.Row="16" Grid.Column="17" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r16c18" Grid.Row="16" Grid.Column="18" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r16c19" Grid.Row="16" Grid.Column="19" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r17c0" Grid.Row="17" Grid.Column="0" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r17c1" Grid.Row="17" Grid.Column="1" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r17c2" Grid.Row="17" Grid.Column="2" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r17c3" Grid.Row="17" Grid.Column="3" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r17c4" Grid.Row="17" Grid.Column="4" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r17c5" Grid.Row="17" Grid.Column="5" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r17c6" Grid.Row="17" Grid.Column="6" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r17c7" Grid.Row="17" Grid.Column="7" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r17c8" Grid.Row="17" Grid.Column="8" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r17c9" Grid.Row="17" Grid.Column="9" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r17c10" Grid.Row="17" Grid.Column="10" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r17c11" Grid.Row="17" Grid.Column="11" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r17c12" Grid.Row="17" Grid.Column="12" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r17c13" Grid.Row="17" Grid.Column="13" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r17c14" Grid.Row="17" Grid.Column="14" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r17c15" Grid.Row="17" Grid.Column="15" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r17c16" Grid.Row="17" Grid.Column="16" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r17c17" Grid.Row="17" Grid.Column="17" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r17c18" Grid.Row="17" Grid.Column="18" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r17c19" Grid.Row="17" Grid.Column="19" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r18c0" Grid.Row="18" Grid.Column="0" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r18c1" Grid.Row="18" Grid.Column="1" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r18c2" Grid.Row="18" Grid.Column="2" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r18c3" Grid.Row="18" Grid.Column="3" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r18c4" Grid.Row="18" Grid.Column="4" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r18c5" Grid.Row="18" Grid.Column="5" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r18c6" Grid.Row="18" Grid.Column="6" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r18c7" Grid.Row="18" Grid.Column="7" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r18c8" Grid.Row="18" Grid.Column="8" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r18c9" Grid.Row="18" Grid.Column="9" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r18c10" Grid.Row="18" Grid.Column="10" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r18c11" Grid.Row="18" Grid.Column="11" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r18c12" Grid.Row="18" Grid.Column="12" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r18c13" Grid.Row="18" Grid.Column="13" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r18c14" Grid.Row="18" Grid.Column="14" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r18c15" Grid.Row="18" Grid.Column="15" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r18c16" Grid.Row="18" Grid.Column="16" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r18c17" Grid.Row="18" Grid.Column="17" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r18c18" Grid.Row="18" Grid.Column="18" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r18c19" Grid.Row="18" Grid.Column="19" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r19c0" Grid.Row="19" Grid.Column="0" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r19c1" Grid.Row="19" Grid.Column="1" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r19c2" Grid.Row="19" Grid.Column="2" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r19c3" Grid.Row="19" Grid.Column="3" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r19c4" Grid.Row="19" Grid.Column="4" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r19c5" Grid.Row="19" Grid.Column="5" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r19c6" Grid.Row="19" Grid.Column="6" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r19c7" Grid.Row="19" Grid.Column="7" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r19c8" Grid.Row="19" Grid.Column="8" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r19c9" Grid.Row="19" Grid.Column="9" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r19c10" Grid.Row="19" Grid.Column="10" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r19c11" Grid.Row="19" Grid.Column="11" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r19c12" Grid.Row="19" Grid.Column="12" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r19c13" Grid.Row="19" Grid.Column="13" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r19c14" Grid.Row="19" Grid.Column="14" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r19c15" Grid.Row="19" Grid.Column="15" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r19c16" Grid.Row="19" Grid.Column="16" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r19c17" Grid.Row="19" Grid.Column="17" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r19c18" Grid.Row="19" Grid.Column="18" MouseDown="gridMouseDown"  Background="White"></Grid>
+            <Grid x:Name="r19c19" Grid.Row="19" Grid.Column="19" MouseDown="gridMouseDown"  Background="White"></Grid>
+        </Grid>
+        
+        <Button x:Name="Restart" Content="Сброс" HorizontalAlignment="Left" Height="32" Margin="1100,810,0,0" VerticalAlignment="Top" Width="87" Background="#FF6273AA" BorderBrush="#FFC1C0E8" FontWeight="Bold" Foreground="White" FontFamily="Stencil" FontSize="14.667" Click="Restart_Click" Visibility="Collapsed"/>
+        <Button x:Name="Start" Content="Начать" HorizontalAlignment="Left" Height="32" Margin="1000,810,0,0" VerticalAlignment="Top" Width="87" Background="#FF6273AA" BorderBrush="#FFC1C0E8" FontWeight="Bold" Foreground="White" FontFamily="Stencil" FontSize="14.667" Click="Start_Click"/>
+        <Button x:Name="Stop" Content="Остановить" HorizontalAlignment="Left" Height="32" Margin="990,810,0,0" VerticalAlignment="Top" Width="100" Background="#FF6273AA" BorderBrush="#FFC1C0E8" FontWeight="Bold" Foreground="White" FontFamily="Stencil" FontSize="14.667" Click="Stop_Click" Visibility="Collapsed"/>
+        <Button x:Name="Continue" Content="Продолжить" HorizontalAlignment="Left" Height="32" Margin="990,810,0,0" VerticalAlignment="Top" Width="100" Background="#FF6273AA" BorderBrush="#FFC1C0E8" FontWeight="Bold" Foreground="White" FontFamily="Stencil" FontSize="14.667" Click="Continue_Click" Visibility="Collapsed"/>
+    </Grid>
+</Window>
