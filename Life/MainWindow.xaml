@@ -467,9 +467,12 @@
             <Grid x:Name="r19c19" Grid.Row="19" Grid.Column="19" MouseDown="gridMouseDown"  Background="White"></Grid>
         </Grid>
         
-        <Button x:Name="Restart" Content="Сброс" HorizontalAlignment="Left" Height="32" Margin="1100,810,0,0" VerticalAlignment="Top" Width="87" Background="#FF6273AA" BorderBrush="#FFC1C0E8" FontWeight="Bold" Foreground="White" FontFamily="Stencil" FontSize="14.667" Click="Restart_Click" Visibility="Collapsed"/>
-        <Button x:Name="Start" Content="Начать" HorizontalAlignment="Left" Height="32" Margin="1000,810,0,0" VerticalAlignment="Top" Width="87" Background="#FF6273AA" BorderBrush="#FFC1C0E8" FontWeight="Bold" Foreground="White" FontFamily="Stencil" FontSize="14.667" Click="Start_Click"/>
-        <Button x:Name="Stop" Content="Остановить" HorizontalAlignment="Left" Height="32" Margin="990,810,0,0" VerticalAlignment="Top" Width="100" Background="#FF6273AA" BorderBrush="#FFC1C0E8" FontWeight="Bold" Foreground="White" FontFamily="Stencil" FontSize="14.667" Click="Stop_Click" Visibility="Collapsed"/>
-        <Button x:Name="Continue" Content="Продолжить" HorizontalAlignment="Left" Height="32" Margin="990,810,0,0" VerticalAlignment="Top" Width="100" Background="#FF6273AA" BorderBrush="#FFC1C0E8" FontWeight="Bold" Foreground="White" FontFamily="Stencil" FontSize="14.667" Click="Continue_Click" Visibility="Collapsed"/>
+        <Button x:Name="Random" Content="Расставить в случайном порядке" HorizontalAlignment="Left" Height="32" Margin="900,770,0,0" VerticalAlignment="Top" Width="250" Background="#FF6273AA" BorderBrush="#FFC1C0E8" FontWeight="Bold" Foreground="White" FontFamily="Stencil" FontSize="14.667" Click="Random_OnClick_Click"/>
+        <Button x:Name="ClickMove" Content="Сделать один ход" HorizontalAlignment="Left" Height="32" Margin="900,770,0,0" VerticalAlignment="Top" Width="250" Background="#FF6273AA" BorderBrush="#FFC1C0E8" FontWeight="Bold" Foreground="White" FontFamily="Stencil" FontSize="14.667" Click="ClickMove_OnClick" Visibility="Collapsed"/>
+        
+        <Button x:Name="Restart" Content="Сброс" HorizontalAlignment="Left" Height="32" Margin="1000,810,0,0" VerticalAlignment="Top" Width="87" Background="#FF6273AA" BorderBrush="#FFC1C0E8" FontWeight="Bold" Foreground="White" FontFamily="Stencil" FontSize="14.667" Click="Restart_Click" Visibility="Collapsed"/>
+        <Button x:Name="Start" Content="Начать" HorizontalAlignment="Left" Height="32" Margin="900,810,0,0" VerticalAlignment="Top" Width="87" Background="#FF6273AA" BorderBrush="#FFC1C0E8" FontWeight="Bold" Foreground="White" FontFamily="Stencil" FontSize="14.667" Click="Start_Click"/>
+        <Button x:Name="Stop" Content="Остановить" HorizontalAlignment="Left" Height="32" Margin="890,810,0,0" VerticalAlignment="Top" Width="100" Background="#FF6273AA" BorderBrush="#FFC1C0E8" FontWeight="Bold" Foreground="White" FontFamily="Stencil" FontSize="14.667" Click="Stop_Click" Visibility="Collapsed"/>
+        <Button x:Name="Continue" Content="Продолжить" HorizontalAlignment="Left" Height="32" Margin="890,810,0,0" VerticalAlignment="Top" Width="100" Background="#FF6273AA" BorderBrush="#FFC1C0E8" FontWeight="Bold" Foreground="White" FontFamily="Stencil" FontSize="14.667" Click="Continue_Click" Visibility="Collapsed"/>
     </Grid>
 </Window>
