@@ -110,7 +110,6 @@ namespace Life
             Initializer.aliveRandomElements(theGrid);
             Random.Visibility = Visibility.Collapsed;
         }
-
         private void ClickMove_OnClick(object sender, RoutedEventArgs e)
         {
             Game.CalculateNextState(theGrid);
