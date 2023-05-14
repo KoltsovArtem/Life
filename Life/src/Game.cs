@@ -13,7 +13,7 @@ namespace Life
 
             while (MainWindow.isEvolving)
             {
-                await Task.Delay(1000);
+                await Task.Delay(100);
 
                 CalculateNextState(grid);
 

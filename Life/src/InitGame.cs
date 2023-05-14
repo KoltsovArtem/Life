@@ -9,7 +9,7 @@ namespace Life
     {
         public static async Task unaliveElements(Grid[,] grid)
         {
-            await Task.Delay(1000);
+            await Task.Delay(100);
             
             foreach (var element in grid)
             {
