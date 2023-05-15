@@ -80,19 +80,35 @@ namespace Life
         
         public static void CalculateNextState(Grid[,] grid)
         {
+            int[,] arr = new int[20, 20];
             for (int i = 0; i < 20; i++)
             {
                 for (int j = 0; j < 20; j++)
                 {
                     if (grid[i, j].Tag == "dead" && countNeighbours(i, j, grid) == 3)
                     {
-                        grid[i, j].Tag = "alive";
+                        arr[i, j] = 1;
                     }
                     else if (grid[i, j].Tag == "alive" && (countNeighbours(i, j, grid)<2 && countNeighbours(i, j, grid)>3))
                     {
-                        grid[i, j].Tag = "dead";
+                        arr[i, j] = 0;
                     }
-                    else if (grid[i, j].Tag == "alive" && (countNeighbours(i, j, grid) >= 2 && countNeighbours(i, j, grid) <= 3))
+                    else if (grid[i, j].Tag == "alive" && (countNeighbours(i, j, grid) == 2 || countNeighbours(i, j, grid) == 3))
+                    {
+                        arr[i, j] = 1;
+                    }
+                    else
+                    {
+                        arr[i, j] = 0;
+                    }
+                }
+            }
+
+            for (int i = 0; i < 20; i++)
+            {
+                for (int j = 0; j < 20; j++)
+                {
+                    if (arr[i, j] == 1)
                     {
                         grid[i, j].Tag = "alive";
                     }
