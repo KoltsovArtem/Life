@@ -86,7 +86,7 @@ namespace Life
             
             await Game.Evolve(theGrid);
         }
-        
+
         private void gridMouseDown(object sender, MouseButtonEventArgs e)
         {
             Random random = new Random();
@@ -104,7 +104,26 @@ namespace Life
                 square.Background = new SolidColorBrush(Colors.White);
             }
         }
+        
+        private void R0c0_OnMouseEnter(object sender, MouseEventArgs e)
+        {
+            Grid square = (Grid)sender;
+            
+            if (square.Tag == "alive")
+            {
+                
+            }
+            else
+            {
+                
+            }
+        }
 
+        private void R0c0_OnMouseLeave(object sender, MouseEventArgs e)
+        {
+            Grid square = (Grid)sender;
+        }
+        
         private void Random_OnClick_Click(object sender, RoutedEventArgs e)
         {
             Initializer.aliveRandomElements(theGrid);
