@@ -87,7 +87,22 @@ namespace Life
             
             await Game.Evolve(theGrid, arrGen);
         }
-
+        
+        private void Random_OnClick_Click(object sender, RoutedEventArgs e)
+        {
+            Initializer.aliveRandomElements(theGrid, arrGen);
+            Random.Visibility = Visibility.Collapsed;
+        }
+        
+        private void ClickMove_OnClick(object sender, RoutedEventArgs e)
+        {
+            Random random = new Random();
+            Game.CalculateNextState(theGrid, arrGen);
+            Game.evolveOnce(theGrid, random);
+        }
+        
+        
+        
         private void gridMouseDown(object sender, MouseButtonEventArgs e)
         {
             Random random = new Random();
@@ -131,18 +146,6 @@ namespace Life
         private void R0c0_OnMouseLeave(object sender, MouseEventArgs e)
         {
             Box.Visibility = Visibility.Collapsed;
-        }
-        
-        private void Random_OnClick_Click(object sender, RoutedEventArgs e)
-        {
-            Initializer.aliveRandomElements(theGrid, arrGen);
-            Random.Visibility = Visibility.Collapsed;
-        }
-        
-        private void ClickMove_OnClick(object sender, RoutedEventArgs e)
-        {
-            Game.CalculateNextState(theGrid, arrGen);
-            Game.clickEvolve(theGrid);
         }
     }
 }

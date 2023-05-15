@@ -17,30 +17,12 @@ namespace Life
 
                 CalculateNextState(grid, gen);
 
-                for (int i = 0; i < 20; i++)
-                {
-                    for (int j = 0; j < 20; j++)
-                    {
-                        if (grid[i, j].Tag == "alive")
-                        {
-                            Grid square = grid[i, j];
-                            square.Background = new SolidColorBrush(Color.FromRgb(Convert.ToByte(random.Next(255)),
-                                Convert.ToByte(random.Next(255)), Convert.ToByte(random.Next(255))));
-                        }
-                        else
-                        {
-                            Grid square = grid[i, j];
-                            square.Background = new SolidColorBrush(Colors.White);
-                        }
-                    }
-                }
+                evolveOnce(grid, random);
             }
         }
 
-        public static void clickEvolve(Grid[,] grid)
+        public static void evolveOnce(Grid[,] grid, Random random)
         {
-            Random random = new Random();
-
             for (int i = 0; i < 20; i++)
             {
                 for (int j = 0; j < 20; j++)
