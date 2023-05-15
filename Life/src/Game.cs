@@ -7,7 +7,7 @@ namespace Life
 {
     public class Game
     {
-        public static async Task Evolve(Grid[,] grid)
+        public static async Task Evolve(Grid[,] grid, int[,] gen)
         {
             Random random = new Random();
 
@@ -15,7 +15,7 @@ namespace Life
             {
                 await Task.Delay(100);
 
-                CalculateNextState(grid);
+                CalculateNextState(grid, gen);
 
                 for (int i = 0; i < 20; i++)
                 {
@@ -78,7 +78,7 @@ namespace Life
             return count;
         }
         
-        public static void CalculateNextState(Grid[,] grid)
+        public static void CalculateNextState(Grid[,] grid, int [,] gen)
         {
             int[,] arr = new int[20, 20];
             for (int i = 0; i < 20; i++)
@@ -110,10 +110,12 @@ namespace Life
                 {
                     if (arr[i, j] == 1)
                     {
+                        gen[i, j]++;
                         grid[i, j].Tag = "alive";
                     }
                     else
                     {
+                        gen[i, j] = 0;
                         grid[i, j].Tag = "dead";
                     }
                 }

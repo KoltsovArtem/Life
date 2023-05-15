@@ -11,8 +11,9 @@ namespace Life
     /// </summary>
     public partial class MainWindow
     {
-        public static bool isEvolving = false;
+        public static bool isEvolving;
         private Grid[,] theGrid;
+        private int[,] arrGen = new int[20,20];
         
         public MainWindow()
         {
@@ -50,7 +51,7 @@ namespace Life
             Random.Visibility = Visibility.Collapsed;
             isEvolving = true;
 
-            await Game.Evolve(theGrid);
+            await Game.Evolve(theGrid, arrGen);
         }
 
         private async void Restart_Click(object sender, RoutedEventArgs e)
@@ -84,7 +85,7 @@ namespace Life
             ClickMove.Visibility = Visibility.Collapsed;
             isEvolving = true;
             
-            await Game.Evolve(theGrid);
+            await Game.Evolve(theGrid, arrGen);
         }
 
         private void gridMouseDown(object sender, MouseButtonEventArgs e)
@@ -126,12 +127,13 @@ namespace Life
         
         private void Random_OnClick_Click(object sender, RoutedEventArgs e)
         {
-            Initializer.aliveRandomElements(theGrid);
+            Initializer.aliveRandomElements(theGrid, arrGen);
             Random.Visibility = Visibility.Collapsed;
         }
+        
         private void ClickMove_OnClick(object sender, RoutedEventArgs e)
         {
-            Game.CalculateNextState(theGrid);
+            Game.CalculateNextState(theGrid, arrGen);
             Game.clickEvolve(theGrid);
         }
     }

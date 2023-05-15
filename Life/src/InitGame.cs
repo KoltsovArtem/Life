@@ -27,7 +27,7 @@ namespace Life
             }
         }
 
-        public static void aliveRandomElements(Grid[,] grid)
+        public static void aliveRandomElements(Grid[,] grid, int[,] gen)
         {
             Random random = new Random();
             int k, l;
@@ -36,6 +36,7 @@ namespace Life
                 k = random.Next(20);
                 l = random.Next(20);
                 grid[k, l].Tag = "alive";
+                gen[k, l] = 1;
             }
             Game.clickEvolve(grid);
         }
