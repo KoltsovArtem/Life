@@ -17,7 +17,7 @@
             <Grid.Effect>
                 <DropShadowEffect BlurRadius="1" ShadowDepth="1" Color="#FFACACAC"/>
             </Grid.Effect>
-            <TextBlock x:Name="gameName" Text="Проект 'Жизнь'" FontSize="25"></TextBlock>
+            <TextBlock Text="Проект 'Жизнь'" FontSize="25"></TextBlock>
         </Grid>
         
         <Grid HorizontalAlignment="Left" Width="740" Height="740" VerticalAlignment="Top" Margin="40,46,0,0" x:Name="TheGrid" ShowGridLines="True">
@@ -466,6 +466,10 @@
             <Grid x:Name="r19c18" Grid.Row="19" Grid.Column="18" MouseDown="gridMouseDown"  MouseEnter = "R0c0_OnMouseEnter" MouseLeave="R0c0_OnMouseLeave"  Background="White"></Grid>
             <Grid x:Name="r19c19" Grid.Row="19" Grid.Column="19" MouseDown="gridMouseDown"  MouseEnter = "R0c0_OnMouseEnter" MouseLeave="R0c0_OnMouseLeave"  Background="White"></Grid>
         </Grid>
+        
+        <Canvas>
+            <ListBoxItem x:Name = "Box" Content="Wpf" ToolTip="by Microsoft" Width="90" Height="25" VerticalAlignment="Top" HorizontalAlignment = "Left" Background="Black" Canvas.Left="10" Canvas.Top="10" Visibility="Collapsed"/>
+        </Canvas>
         
         <Button x:Name="Random" Content="Расставить в случайном порядке" HorizontalAlignment="Left" Height="32" Margin="900,710,0,0" VerticalAlignment="Top" Width="250" Background="#FF6273AA" BorderBrush="#FFC1C0E8" FontWeight="Bold" Foreground="White" FontFamily="Stencil" FontSize="14.667" Click="Random_OnClick_Click"/>
         <Button x:Name="ClickMove" Content="Сделать один ход" HorizontalAlignment="Left" Height="32" Margin="900,710,0,0" VerticalAlignment="Top" Width="250" Background="#FF6273AA" BorderBrush="#FFC1C0E8" FontWeight="Bold" Foreground="White" FontFamily="Stencil" FontSize="14.667" Click="ClickMove_OnClick" Visibility="Collapsed"/>

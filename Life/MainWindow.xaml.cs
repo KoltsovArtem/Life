@@ -93,14 +93,19 @@ namespace Life
             Random random = new Random();
             
             Grid square = (Grid)sender;
+            int row = Grid.GetRow(square);
+            int column = Grid.GetColumn(square);
+            
             if (!isEvolving && square.Tag == "dead")
             {
                 square.Tag = "alive";
+                arrGen[row, column] = 1;
                 square.Background = new SolidColorBrush(Color.FromRgb(Convert.ToByte(random.Next(255)),
                     Convert.ToByte(random.Next(255)), Convert.ToByte(random.Next(255))));
             }
             else if (!isEvolving && square.Tag == "alive")
             {
+                arrGen[row, column] = 0;
                 square.Tag = "dead";
                 square.Background = new SolidColorBrush(Colors.White);
             }
@@ -109,20 +114,23 @@ namespace Life
         private void R0c0_OnMouseEnter(object sender, MouseEventArgs e)
         {
             Grid square = (Grid)sender;
-            
+            int row = Grid.GetRow(square);
+            int column = Grid.GetColumn(square);
+            var x = e.GetPosition(this).X;
+            var y = e.GetPosition(this).Y;
+
             if (square.Tag == "alive")
             {
-                
-            }
-            else
-            {
-                
+                Canvas.SetLeft(Box, x);
+                Canvas.SetTop(Box, y);
+                Box.Content = $"Поколение: {arrGen[row, column]}";
+                Box.Visibility = Visibility.Visible;
             }
         }
 
         private void R0c0_OnMouseLeave(object sender, MouseEventArgs e)
         {
-            Grid square = (Grid)sender;
+            Box.Visibility = Visibility.Collapsed;
         }
         
         private void Random_OnClick_Click(object sender, RoutedEventArgs e)
