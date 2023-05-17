@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Life"
         mc:Ignorable="d"
-        Title="Project 'Life'" Height="860" Width="1200" Foreground="White" WindowStartupLocation="CenterScreen" >
+        Title="Project 'Life'" Height="860" Width="1200" Foreground="White" WindowStartupLocation="CenterScreen" 
+        Closing="MainWindow_OnClosing">
     <Window.Resources>
         <LinearGradientBrush x:Key="GradientStyle" StartPoint="0.9,1" EndPoint="0.5,0">
             <GradientStop Color="LightBlue" Offset="0" />
@@ -473,6 +474,9 @@
         
         <Button x:Name="Random" Content="Расставить в случайном порядке" HorizontalAlignment="Left" Height="32" Margin="900,710,0,0" VerticalAlignment="Top" Width="250" Background="#FF6273AA" BorderBrush="#FFC1C0E8" FontWeight="Bold" Foreground="White" FontFamily="Stencil" FontSize="14.667" Click="Random_OnClick_Click"/>
         <Button x:Name="ClickMove" Content="Сделать один ход" HorizontalAlignment="Left" Height="32" Margin="900,710,0,0" VerticalAlignment="Top" Width="250" Background="#FF6273AA" BorderBrush="#FFC1C0E8" FontWeight="Bold" Foreground="White" FontFamily="Stencil" FontSize="14.667" Click="ClickMove_OnClick" Visibility="Collapsed"/>
+        
+        <Button x:Name="Save" Content="Сохранить состояние поля" HorizontalAlignment="Left" Height="32" Margin="900,50,0,0" VerticalAlignment="Top" Width="250" Background="#FF6273AA" BorderBrush="#FFC1C0E8" FontWeight="Bold" Foreground="White" FontFamily="Stencil" FontSize="14.667" Click="Save_OnClick"/>
+        <Button x:Name="Load" Content="Загрузить состояние поля" HorizontalAlignment="Left" Height="32" Margin="900,100,0,0" VerticalAlignment="Top" Width="250" Background="#FF6273AA" BorderBrush="#FFC1C0E8" FontWeight="Bold" Foreground="White" FontFamily="Stencil" FontSize="14.667" Click="Load_OnClick"/>
         
         <Button x:Name="Restart" Content="Сброс" HorizontalAlignment="Left" Height="32" Margin="1000,750,0,0" VerticalAlignment="Top" Width="87" Background="#FF6273AA" BorderBrush="#FFC1C0E8" FontWeight="Bold" Foreground="White" FontFamily="Stencil" FontSize="14.667" Click="Restart_Click" Visibility="Collapsed"/>
         <Button x:Name="Start" Content="Начать" HorizontalAlignment="Left" Height="32" Margin="900,750,0,0" VerticalAlignment="Top" Width="87" Background="#FF6273AA" BorderBrush="#FFC1C0E8" FontWeight="Bold" Foreground="White" FontFamily="Stencil" FontSize="14.667" Click="Start_Click"/>

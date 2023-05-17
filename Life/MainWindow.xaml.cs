@@ -1,8 +1,10 @@
 ﻿using System;
+using System.ComponentModel;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
+using Microsoft.Win32;
 
 namespace Life
 {
@@ -101,7 +103,24 @@ namespace Life
             Game.evolveOnce(theGrid, random);
         }
         
+        private void Save_OnClick(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            if (openFileDialog.ShowDialog() == true)
+            {
+                Initializer.saveCondition(theGrid, arrGen);
+            }
+        }
         
+        private void Load_OnClick(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            if (openFileDialog.ShowDialog() == true)
+            {
+                var path = openFileDialog.FileName;
+                Initializer.loadCondition(theGrid, arrGen, path);
+            }
+        }
         
         private void gridMouseDown(object sender, MouseButtonEventArgs e)
         {
@@ -146,6 +165,23 @@ namespace Life
         private void R0c0_OnMouseLeave(object sender, MouseEventArgs e)
         {
             Box.Visibility = Visibility.Collapsed;
+        }
+
+        
+        
+        private void MainWindow_OnClosing(object sender, CancelEventArgs e)
+        {
+            if (MessageBox.Show("Зачем закрываешь?",
+                    "Save file",
+                    MessageBoxButton.YesNo,
+                    MessageBoxImage.Question) == MessageBoxResult.Yes)
+            {
+                MessageBox.Show("Да.");
+            }
+            else
+            {
+                MessageBox.Show("Нет.");
+            }
         }
     }
 }

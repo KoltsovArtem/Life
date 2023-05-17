@@ -41,5 +41,15 @@ namespace Life
             }
             Game.evolveOnce(grid, random);
         }
+
+        public static void saveCondition(Grid[,] grid, int[,] gen)
+        {
+            
+        }
+
+        public static void loadCondition(Grid[,] grid, int[,] gen, string path)
+        {
+            
+        }
     }
 }
