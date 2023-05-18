@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel;
+using System.IO;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
@@ -104,6 +105,7 @@ namespace Life
                 }
             };
             Initializer.loadCondition(theGrid, arrGen, @"..\..\Files\Condition.txt");
+            File.WriteAllText(@"..\..\Files\Condition.txt", string.Empty);
         }
         
         private async void Start_Click(object sender, RoutedEventArgs e)
@@ -256,6 +258,7 @@ namespace Life
                     MessageBoxButton.YesNo,
                     MessageBoxImage.Question) == MessageBoxResult.Yes)
             {
+                Initializer.saveCondition(theGrid, arrGen, @"..\..\Files\Condition.txt");
                 MessageBox.Show("Файл сохранён. При следующем запуске будет загружено текущее состояние.");
             }
         }
