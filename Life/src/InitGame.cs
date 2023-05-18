@@ -2,6 +2,7 @@
 using System.IO;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
 
@@ -20,13 +21,16 @@ namespace Life
             }
         }
 
-        public static void initElements(Grid[,] grid)
+        public static async void initElements(Grid[,] grid, int[,] gen)
         {
-            foreach (var element in grid)
+            await Task.Delay(5000);
+            MessageBox.Show("Ура!!! Получилось)))");
+            loadCondition(grid, gen, "Condition.txt");
+            /*foreach (var element in grid)
             {
                 element.Tag = "dead";
                 element.Background = new SolidColorBrush(Colors.White);
-            }
+            }*/
         }
 
         public static void aliveRandomElements(Grid[,] grid, int[,] gen)
@@ -86,6 +90,10 @@ namespace Life
             {
                 Console.WriteLine(ex.ToString());
             }
+
+            Random random = new Random();
+            grid[1, 2].Background = new SolidColorBrush(Color.FromRgb(Convert.ToByte(random.Next(255)),
+                Convert.ToByte(random.Next(255)), Convert.ToByte(random.Next(255))));
             
             for (int k = 0; k < 20; k++)
             {
