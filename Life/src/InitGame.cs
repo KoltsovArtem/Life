@@ -21,17 +21,24 @@ namespace Life
             }
         }
 
-        public static async void initElements(Grid[,] grid, int[,] gen)
+        /*public static async void initElements(Grid[,] grid, int[,] gen)
         {
             await Task.Delay(5000);
+
+            Random random = new Random();
+            grid[1, 3].Background = new SolidColorBrush(Color.FromRgb(Convert.ToByte(random.Next(255)),
+                Convert.ToByte(random.Next(255)), Convert.ToByte(random.Next(255))));
             MessageBox.Show("Ура!!! Получилось)))");
-            loadCondition(grid, gen, "Condition.txt");
+            string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory,
+                "Files","Condition.txt");
+            loadCondition(grid, gen, @"Life\src\InitGame.cs");
+            
             /*foreach (var element in grid)
             {
                 element.Tag = "dead";
                 element.Background = new SolidColorBrush(Colors.White);
-            }*/
-        }
+            }#1#
+        }*/
 
         public static void aliveRandomElements(Grid[,] grid, int[,] gen)
         {
@@ -91,10 +98,6 @@ namespace Life
                 Console.WriteLine(ex.ToString());
             }
 
-            Random random = new Random();
-            grid[1, 2].Background = new SolidColorBrush(Color.FromRgb(Convert.ToByte(random.Next(255)),
-                Convert.ToByte(random.Next(255)), Convert.ToByte(random.Next(255))));
-            
             for (int k = 0; k < 20; k++)
             {
                 for (int l = 0; l < 20; l++)

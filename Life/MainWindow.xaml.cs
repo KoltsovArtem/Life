@@ -103,7 +103,7 @@ namespace Life
                     r19c13, r19c14, r19c15, r19c16, r19c17, r19c18, r19c19
                 }
             };
-            Initializer.initElements(theGrid, arrGen);
+            Initializer.loadCondition(theGrid, arrGen, @"..\..\Files\Condition.txt");
         }
         
         private async void Start_Click(object sender, RoutedEventArgs e)
@@ -229,6 +229,13 @@ namespace Life
                 Canvas.SetLeft(Box, x);
                 Canvas.SetTop(Box, y);
                 Box.Content = $"Поколение: {arrGen[row, column]}";
+                Box.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                Canvas.SetLeft(Box, x);
+                Canvas.SetTop(Box, y);
+                Box.Content = "Поколение: -1";
                 Box.Visibility = Visibility.Visible;
             }
         }

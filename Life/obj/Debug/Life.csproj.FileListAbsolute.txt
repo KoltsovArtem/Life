@@ -31,3 +31,4 @@ C:\Users\artem\RiderProjects\Life\Life\obj\Debug\Life.csproj.CoreCompileInputs.c
 C:\Users\artem\RiderProjects\Life\Life\obj\Debug\Life.exe
 C:\Users\artem\RiderProjects\Life\Life\obj\Debug\Life.pdb
 C:\Users\artem\RiderProjects\Life\Life\obj\Debug\Life_Content.g.cs
+C:\Users\Артём\RiderProjects\Life\Life\obj\Debug\Life_Content.g.cs
