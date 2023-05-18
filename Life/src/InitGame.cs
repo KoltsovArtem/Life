@@ -48,20 +48,17 @@ namespace Life
         {
             try
             {
-                /*using (FileStream fs = File.Create(path))
+                using (StreamWriter writer = new StreamWriter(path))
                 {
-                    using (StreamWriter writer = new StreamWriter(path))
+                    for (int i = 0; i < gen.GetLength(0); i++)
                     {
-                        for (int i = 0; i < gen.GetLength(0); i++)
+                        for (int j = 0; j < gen.GetLength(1); j++)
                         {
-                            for (int j = 0; j < gen.GetLength(1); j++)
-                            {
-                                writer.Write(gen[i,j] + " "); // записываем каждый элемент массива в файл с помощью метода Write()
-                            }
-                            writer.WriteLine(); // переходим на новую строку после записи каждой строки массива
+                            writer.Write(gen[i, j] + " ");
                         }
+                        writer.WriteLine();
                     }
-                }*/
+                }
             }
 
             catch (Exception ex)
@@ -74,21 +71,36 @@ namespace Life
         {
             try
             {
-                /*// Open the stream and read it back.
-                using (StreamReader sr = File.OpenText(path))
+                string[] lines = File.ReadAllLines(path);
+
+                for (int i = 0; i < 20; i++)
                 {
-                    string s = "";
-                    while ((s = sr.ReadLine()) != null)
-                    {
-                        Console.WriteLine(s);
+                    string[] valuesStringArray=lines[i].Split(' ');
+                    for (int j = 0;j < 20; j++){
+                        gen[i,j] = Convert.ToInt32(valuesStringArray[j]);
                     }
-                }*/
+                }
             }
 
             catch (Exception ex)
             {
                 Console.WriteLine(ex.ToString());
             }
+            
+            for (int k = 0; k < 20; k++)
+            {
+                for (int l = 0; l < 20; l++)
+                {
+                    if (gen[k, l] != 0)
+                    {
+                        grid[k, l].Tag = "alive";
+                    }
+                    else
+                        grid[k, l].Tag = "dead";
+                }
+            }
+            
+            Game.evolveOnce(grid, new Random());
         }
     }
 }
