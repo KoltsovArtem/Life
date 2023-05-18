@@ -1,4 +1,6 @@
 ﻿using System;
+using System.IO;
+using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Controls;
 using System.Windows.Media;
@@ -42,14 +44,51 @@ namespace Life
             Game.evolveOnce(grid, random);
         }
 
-        public static void saveCondition(Grid[,] grid, int[,] gen)
+        public static void saveCondition(Grid[,] grid, int[,] gen, string path)
         {
-            
+            try
+            {
+                /*using (FileStream fs = File.Create(path))
+                {
+                    using (StreamWriter writer = new StreamWriter(path))
+                    {
+                        for (int i = 0; i < gen.GetLength(0); i++)
+                        {
+                            for (int j = 0; j < gen.GetLength(1); j++)
+                            {
+                                writer.Write(gen[i,j] + " "); // записываем каждый элемент массива в файл с помощью метода Write()
+                            }
+                            writer.WriteLine(); // переходим на новую строку после записи каждой строки массива
+                        }
+                    }
+                }*/
+            }
+
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
         }
 
         public static void loadCondition(Grid[,] grid, int[,] gen, string path)
         {
-            
+            try
+            {
+                /*// Open the stream and read it back.
+                using (StreamReader sr = File.OpenText(path))
+                {
+                    string s = "";
+                    while ((s = sr.ReadLine()) != null)
+                    {
+                        Console.WriteLine(s);
+                    }
+                }*/
+            }
+
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
         }
     }
 }

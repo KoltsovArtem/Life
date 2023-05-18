@@ -75,6 +75,7 @@ namespace Life
             Stop.Visibility = Visibility.Collapsed;
             Continue.Visibility = Visibility.Visible;
             ClickMove.Visibility = Visibility.Visible;
+            Random.Visibility = Visibility.Collapsed;
             isEvolving = false;
         }
         
@@ -105,22 +106,30 @@ namespace Life
         
         private void Save_OnClick(object sender, RoutedEventArgs e)
         {
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-            if (openFileDialog.ShowDialog() == true)
+            Stop_Click(sender, e);
+
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Filter = "TXT files (*.txt)|*.txt";
+            if (saveFileDialog.ShowDialog() == true)
             {
-                Initializer.saveCondition(theGrid, arrGen);
+                string path = saveFileDialog.FileName;
+                Initializer.saveCondition(theGrid, arrGen, path);
             }
         }
         
         private void Load_OnClick(object sender, RoutedEventArgs e)
         {
+            Stop_Click(sender, e);
+            
             OpenFileDialog openFileDialog = new OpenFileDialog();
             if (openFileDialog.ShowDialog() == true)
             {
-                var path = openFileDialog.FileName;
+                string path = openFileDialog.FileName;
                 Initializer.loadCondition(theGrid, arrGen, path);
             }
         }
+        
+        
         
         private void gridMouseDown(object sender, MouseButtonEventArgs e)
         {
@@ -171,6 +180,8 @@ namespace Life
         
         private void MainWindow_OnClosing(object sender, CancelEventArgs e)
         {
+            isEvolving = false;
+            
             if (MessageBox.Show("Зачем закрываешь?",
                     "Save file",
                     MessageBoxButton.YesNo,

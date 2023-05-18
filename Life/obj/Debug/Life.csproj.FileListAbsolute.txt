@@ -30,3 +30,4 @@ C:\Users\artem\RiderProjects\Life\Life\obj\Debug\Life.csproj.GenerateResource.ca
 C:\Users\artem\RiderProjects\Life\Life\obj\Debug\Life.csproj.CoreCompileInputs.cache
 C:\Users\artem\RiderProjects\Life\Life\obj\Debug\Life.exe
 C:\Users\artem\RiderProjects\Life\Life\obj\Debug\Life.pdb
+C:\Users\artem\RiderProjects\Life\Life\obj\Debug\Life_Content.g.cs
