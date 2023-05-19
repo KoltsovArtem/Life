@@ -104,8 +104,22 @@ namespace Life
                     r19c13, r19c14, r19c15, r19c16, r19c17, r19c18, r19c19
                 }
             };
-            Initializer.loadCondition(theGrid, arrGen, @"..\..\Files\Condition.txt");
-            File.WriteAllText(@"..\..\Files\Condition.txt", string.Empty);
+            if (File.ReadAllText(@"..\..\Files\Condition.txt") != string.Empty)
+            {
+                Initializer.loadCondition(theGrid, arrGen, @"..\..\Files\Condition.txt");
+                File.WriteAllText(@"..\..\Files\Condition.txt", string.Empty);
+                stop();
+            }
+        }
+
+        private void stop()
+        {
+            Restart.Visibility = Visibility.Collapsed;
+            Start.Visibility = Visibility.Collapsed;
+            Stop.Visibility = Visibility.Collapsed;
+            Continue.Visibility = Visibility.Visible;
+            ClickMove.Visibility = Visibility.Visible;
+            Random.Visibility = Visibility.Collapsed;
         }
         
         private async void Start_Click(object sender, RoutedEventArgs e)
@@ -134,12 +148,7 @@ namespace Life
 
         private void Stop_Click(object sender, RoutedEventArgs e)
         {
-            Restart.Visibility = Visibility.Collapsed;
-            Start.Visibility = Visibility.Collapsed;
-            Stop.Visibility = Visibility.Collapsed;
-            Continue.Visibility = Visibility.Visible;
-            ClickMove.Visibility = Visibility.Visible;
-            Random.Visibility = Visibility.Collapsed;
+            stop();
             isEvolving = false;
         }
         
