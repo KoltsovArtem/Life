@@ -106,13 +106,15 @@ namespace Life
             };
             if (File.ReadAllText(@"..\..\Files\Condition.txt") != string.Empty)
             {
-                Initializer.loadCondition(theGrid, arrGen, @"..\..\Files\Condition.txt");
+                if (Initializer.loadCondition(theGrid, arrGen, @"..\..\Files\Condition.txt"))
+                {
+                    stop();
+                }
                 File.WriteAllText(@"..\..\Files\Condition.txt", string.Empty);
-                stop();
             }
         }
 
-        private void stop()
+        public void stop()
         {
             Restart.Visibility = Visibility.Collapsed;
             Start.Visibility = Visibility.Collapsed;
@@ -143,7 +145,7 @@ namespace Life
             Random.Visibility = Visibility.Visible;
             isEvolving = false;
             
-            await Initializer.unaliveElements(theGrid);
+            await Initializer.unaliveElements(theGrid, arrGen);
         }
 
         private void Stop_Click(object sender, RoutedEventArgs e)
@@ -242,13 +244,13 @@ namespace Life
                 Box.Content = $"Поколение: {arrGen[row, column]}";
                 Box.Visibility = Visibility.Visible;
             }
-            else
+            /*else
             {
                 Canvas.SetLeft(Box, x);
                 Canvas.SetTop(Box, y);
                 Box.Content = "Поколение: -1";
                 Box.Visibility = Visibility.Visible;
-            }
+            }*/
         }
 
         private void R0c0_OnMouseLeave(object sender, MouseEventArgs e)

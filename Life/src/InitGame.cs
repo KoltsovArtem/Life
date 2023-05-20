@@ -10,10 +10,18 @@ namespace Life
 {
     public class Initializer
     {
-        public static async Task unaliveElements(Grid[,] grid)
+        public static async Task unaliveElements(Grid[,] grid, int[,] gen)
         {
             await Task.Delay(100);
 
+            for (int i = 0; i < gen.GetLength(0); i++)
+            {
+                for (int j = 0; j < gen.GetLength(1); j++)
+                {
+                    gen[i, j] = 0;
+                }
+            }
+            
             foreach (var element in grid)
             {
                 element.Tag = "dead";
@@ -59,7 +67,7 @@ namespace Life
             }
         }
 
-        public static void loadCondition(Grid[,] grid, int[,] gen, string path)
+        public static bool loadCondition(Grid[,] grid, int[,] gen, string path)
         {
             try
             {
@@ -82,13 +90,14 @@ namespace Life
             Random random = new Random();
             grid[1, 2].Background = new SolidColorBrush(Color.FromRgb(Convert.ToByte(random.Next(255)),
                 Convert.ToByte(random.Next(255)), Convert.ToByte(random.Next(255))));
-            
+            int g = 0;
             for (int k = 0; k < 20; k++)
             {
                 for (int l = 0; l < 20; l++)
                 {
                     if (gen[k, l] != 0)
                     {
+                        g++;
                         grid[k, l].Tag = "alive";
                     }
                     else
@@ -97,6 +106,12 @@ namespace Life
             }
             
             Game.evolveOnce(grid, new Random());
+            if (g != 0)
+            {
+                return true;
+            }
+
+            return false;
         }
     }
 }
