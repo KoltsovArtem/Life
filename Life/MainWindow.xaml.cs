@@ -6,6 +6,7 @@ using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
 using Microsoft.Win32;
+using Grpc.Net.Client;
 
 namespace Life
 {
@@ -112,6 +113,8 @@ namespace Life
                 }
                 File.WriteAllText(@"..\..\Files\Condition.txt", string.Empty);
             }
+            var channel = GrpcChannel.ForAddress("https://localhost:5111");
+            var client = new Greeter.GreeterClient(channel);
         }
 
         public void stop()
