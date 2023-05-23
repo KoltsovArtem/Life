@@ -1,6 +1,7 @@
 ﻿using System;
 using System.ComponentModel;
 using System.IO;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
@@ -244,20 +245,38 @@ namespace Life
                 Box.Content = $"Поколение: {arrGen[row, column]}";
                 Box.Visibility = Visibility.Visible;
             }
-            /*else
-            {
-                Canvas.SetLeft(Box, x);
-                Canvas.SetTop(Box, y);
-                Box.Content = "Поколение: -1";
-                Box.Visibility = Visibility.Visible;
-            }*/
         }
 
         private void R0c0_OnMouseLeave(object sender, MouseEventArgs e)
         {
             Box.Visibility = Visibility.Collapsed;
         }
-
+        
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            stop();
+            Do.Visibility = Visibility.Visible;
+            ClickMove.Visibility = Visibility.Collapsed;
+            isEvolving = false;
+        }
+        
+        private async void Do_OnClick(object sender, RoutedEventArgs e)
+        {
+            Do.Visibility = Visibility.Collapsed;
+            Continue.Visibility = Visibility.Collapsed;
+            
+            Random random = new Random();
+            int n = int.Parse(TextBox.Text);
+            for (int i = 0; i < n; i++)
+            {
+                await Task.Delay(100);
+                
+                Game.CalculateNextState(theGrid, arrGen);
+                Game.evolveOnce(theGrid, random);
+            }
+            
+            stop();
+        }
         
         
         private void MainWindow_OnClosing(object sender, CancelEventArgs e)
