@@ -324,5 +324,33 @@ namespace Life
                 MessageBox.Show("Файл сохранён. При следующем запуске будет загружено текущее состояние.");
             }
         }
+
+        private void SavePic_OnClick(object sender, RoutedEventArgs e)
+        {
+            Stop_Click(sender, e);
+
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Filter = "Image Files (*.bmp)|*.bmp";
+            if (saveFileDialog.ShowDialog() == true)
+            {
+                string path = saveFileDialog.FileName;
+                Picture.Save(arrGen, path);
+            }
+        }
+
+        private void LoadPic_OnClick(object sender, RoutedEventArgs e)
+        {
+            Stop_Click(sender, e);
+            
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Image Files (*.bmp)|*.bmp";
+            if (openFileDialog.ShowDialog() == true)
+            {
+                string path = openFileDialog.FileName;
+                Picture.Load(path, theGrid, arrGen);
+            }
+
+            Game.evolveOnce(theGrid, new Random());
+        }
     }
 }

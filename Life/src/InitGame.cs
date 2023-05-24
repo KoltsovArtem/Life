@@ -86,10 +86,7 @@ namespace Life
             {
                 Console.WriteLine(ex.ToString());
             }
-
-            Random random = new Random();
-            grid[1, 2].Background = new SolidColorBrush(Color.FromRgb(Convert.ToByte(random.Next(255)),
-                Convert.ToByte(random.Next(255)), Convert.ToByte(random.Next(255))));
+            
             int g = 0;
             for (int k = 0; k < 20; k++)
             {
