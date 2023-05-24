@@ -52,6 +52,7 @@
         </ApplicationDefinition>
         <Compile Include="src\Game.cs" />
         <Compile Include="src\InitGame.cs" />
+        <Compile Include="src\Picture.cs" />
         <Page Include="MainWindow.xaml">
             <Generator>MSBuild:Compile</Generator>
             <SubType>Designer</SubType>
