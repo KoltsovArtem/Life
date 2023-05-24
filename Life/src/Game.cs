@@ -67,15 +67,15 @@ namespace Life
             {
                 for (int j = 0; j < 20; j++)
                 {
-                    if (grid[i, j].Tag == "dead" && countNeighbours(i, j, grid) == 3)
+                    if (grid[i, j].Tag == "dead" && countNeighbours(i, j, grid) == n)
                     {
                         arr[i, j] = 1;
                     }
-                    else if (grid[i, j].Tag == "alive" && (countNeighbours(i, j, grid)<2 && countNeighbours(i, j, grid)>3))
+                    else if (grid[i, j].Tag == "alive" && (countNeighbours(i, j, grid)<(n-1) && countNeighbours(i, j, grid)>n))
                     {
                         arr[i, j] = 0;
                     }
-                    else if (grid[i, j].Tag == "alive" && (countNeighbours(i, j, grid) == 2 || countNeighbours(i, j, grid) == 3))
+                    else if (grid[i, j].Tag == "alive" && (countNeighbours(i, j, grid) == (n-1) || countNeighbours(i, j, grid) == n))
                     {
                         arr[i, j] = 1;
                     }
