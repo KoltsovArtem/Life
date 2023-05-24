@@ -111,7 +111,7 @@ namespace Life
             };
             if (File.ReadAllText(@"..\..\Files\Condition.txt") != string.Empty)
             {
-                if (Initializer.loadCondition(theGrid, arrGen, @"..\..\Files\Condition.txt"))
+                if (SLCondition.loadCondition(theGrid, arrGen, @"..\..\Files\Condition.txt"))
                 {
                     stop();
                 }
@@ -138,7 +138,7 @@ namespace Life
             Random.Visibility = Visibility.Collapsed;
             isEvolving = true;
 
-            await Game.Evolve(theGrid, arrGen, n, n1, n2);
+            await Evolution.Evolve(theGrid, arrGen, n, n1, n2);
         }
 
         private async void Restart_Click(object sender, RoutedEventArgs e)
@@ -169,7 +169,7 @@ namespace Life
             Do.Visibility = Visibility.Collapsed;
             isEvolving = true;
             
-            await Game.Evolve(theGrid, arrGen, n, n1, n2);
+            await Evolution.Evolve(theGrid, arrGen, n, n1, n2);
         }
         
         private void Random_OnClick_Click(object sender, RoutedEventArgs e)
@@ -182,7 +182,7 @@ namespace Life
         {
             Random random = new Random();
             Game.CalculateNextState(theGrid, arrGen, n, n1, n2);
-            Game.evolveOnce(theGrid, random);
+            Evolution.evolveOnce(theGrid, random);
         }
         
         private void Save_OnClick(object sender, RoutedEventArgs e)
@@ -194,7 +194,7 @@ namespace Life
             if (saveFileDialog.ShowDialog() == true)
             {
                 string path = saveFileDialog.FileName;
-                Initializer.saveCondition(theGrid, arrGen, path);
+                SLCondition.saveCondition(theGrid, arrGen, path);
             }
         }
         
@@ -206,7 +206,7 @@ namespace Life
             if (openFileDialog.ShowDialog() == true)
             {
                 string path = openFileDialog.FileName;
-                Initializer.loadCondition(theGrid, arrGen, path);
+                SLCondition.loadCondition(theGrid, arrGen, path);
             }
         }
         
@@ -277,7 +277,7 @@ namespace Life
                 await Task.Delay(100);
                 
                 Game.CalculateNextState(theGrid, arrGen, n, n1, n2);
-                Game.evolveOnce(theGrid, random);
+                Evolution.evolveOnce(theGrid, random);
             }
             
             stop();
@@ -320,7 +320,7 @@ namespace Life
                     MessageBoxButton.YesNo,
                     MessageBoxImage.Question) == MessageBoxResult.Yes)
             {
-                Initializer.saveCondition(theGrid, arrGen, @"..\..\Files\Condition.txt");
+                SLCondition.saveCondition(theGrid, arrGen, @"..\..\Files\Condition.txt");
                 MessageBox.Show("Файл сохранён. При следующем запуске будет загружено текущее состояние.");
             }
         }
@@ -350,7 +350,7 @@ namespace Life
                 Picture.Load(path, theGrid, arrGen);
             }
 
-            Game.evolveOnce(theGrid, new Random());
+            Evolution.evolveOnce(theGrid, new Random());
         }
     }
 }

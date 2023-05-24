@@ -7,41 +7,6 @@ namespace Life
 {
     public class Game
     {
-        public static async Task Evolve(Grid[,] grid, int[,] gen, int n, int n1, int n2)
-        {
-            Random random = new Random();
-
-            while (MainWindow.isEvolving)
-            {
-                await Task.Delay(100);
-
-                CalculateNextState(grid, gen, n, n1, n2);
-
-                evolveOnce(grid, random);
-            }
-        }
-
-        public static void evolveOnce(Grid[,] grid, Random random)
-        {
-            for (int i = 0; i < 20; i++)
-            {
-                for (int j = 0; j < 20; j++)
-                {
-                    if (grid[i, j].Tag == "alive")
-                    {
-                        Grid square = grid[i, j];
-                        square.Background = new SolidColorBrush(Color.FromRgb(Convert.ToByte(random.Next(255)),
-                            Convert.ToByte(random.Next(255)), Convert.ToByte(random.Next(255))));
-                    }
-                    else
-                    {
-                        Grid square = grid[i, j];
-                        square.Background = new SolidColorBrush(Colors.White);
-                    }
-                }
-            }
-        }
-
         static int countNeighbours (int i, int j, Grid[,] grid)
         {
             var count = 0;
@@ -60,7 +25,7 @@ namespace Life
             return count;
         }
         
-        public static void CalculateNextState(Grid[,] grid, int [,] gen, int n, int n_1, int n_2)
+        public static bool CalculateNextState(Grid[,] grid, int [,] gen, int n, int n_1, int n_2)
         {
             int n1 = Math.Min(n_1, n_2);
             int n2 = Math.Max(n_1, n_2);
@@ -88,22 +53,31 @@ namespace Life
                 }
             }
 
+            int k = 0;
             for (int i = 0; i < 20; i++)
             {
                 for (int j = 0; j < 20; j++)
                 {
                     if (arr[i, j] == 1)
                     {
+                        if (grid[i, j].Tag != "alive")
+                            k = 1;
                         gen[i, j]++;
                         grid[i, j].Tag = "alive";
                     }
                     else
                     {
+                        if (grid[i, j].Tag != "dead")
+                            k = 1;
                         gen[i, j] = 0;
                         grid[i, j].Tag = "dead";
                     }
                 }
             }
+
+            if (k != 0)
+                return true;
+            return false;
         }
         
         static bool IsInsideMap(int i,int j)
