@@ -19,6 +19,9 @@ namespace Life
         private Grid[,] theGrid;
         private int[,] arrGen = new int[20,20];
         private int n = 3;
+        private int n1 = 2;
+        private int n2 = 3;
+
         
         public MainWindow()
         {
@@ -135,7 +138,7 @@ namespace Life
             Random.Visibility = Visibility.Collapsed;
             isEvolving = true;
 
-            await Game.Evolve(theGrid, arrGen, n);
+            await Game.Evolve(theGrid, arrGen, n, n1, n2);
         }
 
         private async void Restart_Click(object sender, RoutedEventArgs e)
@@ -163,9 +166,10 @@ namespace Life
             Start.Visibility = Visibility.Collapsed;
             Continue.Visibility = Visibility.Collapsed;
             ClickMove.Visibility = Visibility.Collapsed;
+            Do.Visibility = Visibility.Collapsed;
             isEvolving = true;
             
-            await Game.Evolve(theGrid, arrGen, n);
+            await Game.Evolve(theGrid, arrGen, n, n1, n2);
         }
         
         private void Random_OnClick_Click(object sender, RoutedEventArgs e)
@@ -177,7 +181,7 @@ namespace Life
         private void ClickMove_OnClick(object sender, RoutedEventArgs e)
         {
             Random random = new Random();
-            Game.CalculateNextState(theGrid, arrGen, n);
+            Game.CalculateNextState(theGrid, arrGen, n, n1, n2);
             Game.evolveOnce(theGrid, random);
         }
         
@@ -272,7 +276,7 @@ namespace Life
             {
                 await Task.Delay(100);
                 
-                Game.CalculateNextState(theGrid, arrGen, n);
+                Game.CalculateNextState(theGrid, arrGen, n, n1, n2);
                 Game.evolveOnce(theGrid, random);
             }
             
@@ -287,6 +291,22 @@ namespace Life
             isEvolving = false;
             if (TextBox1.Text != "")
                 n = int.Parse(TextBox1.Text);
+        }
+        
+        private void TextBox2_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            stop();
+            isEvolving = false;
+            if (TextBox2.Text != "")
+                n1 = int.Parse(TextBox2.Text);
+        }
+        
+        private void TextBox3_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            stop();
+            isEvolving = false;
+            if (TextBox3.Text != "")
+                n2 = int.Parse(TextBox3.Text);
         }
         
         

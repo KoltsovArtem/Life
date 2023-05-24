@@ -7,7 +7,7 @@ namespace Life
 {
     public class Game
     {
-        public static async Task Evolve(Grid[,] grid, int[,] gen, int n)
+        public static async Task Evolve(Grid[,] grid, int[,] gen, int n, int n1, int n2)
         {
             Random random = new Random();
 
@@ -15,7 +15,7 @@ namespace Life
             {
                 await Task.Delay(100);
 
-                CalculateNextState(grid, gen, n);
+                CalculateNextState(grid, gen, n, n1, n2);
 
                 evolveOnce(grid, random);
             }
@@ -60,8 +60,10 @@ namespace Life
             return count;
         }
         
-        public static void CalculateNextState(Grid[,] grid, int [,] gen, int n)
+        public static void CalculateNextState(Grid[,] grid, int [,] gen, int n, int n_1, int n_2)
         {
+            int n1 = Math.Min(n_1, n_2);
+            int n2 = Math.Max(n_1, n_2);
             int[,] arr = new int[20, 20];
             for (int i = 0; i < 20; i++)
             {
@@ -71,11 +73,11 @@ namespace Life
                     {
                         arr[i, j] = 1;
                     }
-                    else if (grid[i, j].Tag == "alive" && (countNeighbours(i, j, grid)<(n-1) && countNeighbours(i, j, grid)>n))
+                    else if (grid[i, j].Tag == "alive" && (countNeighbours(i, j, grid)<n1 && countNeighbours(i, j, grid)>n2))
                     {
                         arr[i, j] = 0;
                     }
-                    else if (grid[i, j].Tag == "alive" && (countNeighbours(i, j, grid) == (n-1) || countNeighbours(i, j, grid) == n))
+                    else if (grid[i, j].Tag == "alive" && (countNeighbours(i, j, grid) == n1 || countNeighbours(i, j, grid) == n2))
                     {
                         arr[i, j] = 1;
                     }

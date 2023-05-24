@@ -468,23 +468,30 @@
             <Grid x:Name="r19c19" Grid.Row="19" Grid.Column="19" MouseDown="gridMouseDown"  MouseEnter = "R0c0_OnMouseEnter" MouseLeave="R0c0_OnMouseLeave"  Background="White"></Grid>
         </Grid>
         
-        <TextBlock VerticalAlignment="Top" HorizontalAlignment = "Left" Margin="860,280,0,0" Width="288" FontWeight="Bold" Foreground="White" FontFamily="Stencil" FontSize="14.667" Background="{StaticResource GradientStyle}">
+        <TextBlock VerticalAlignment="Top" HorizontalAlignment = "Left" Margin="860,330,0,0" Width="288" FontWeight="Bold" Foreground="White" FontFamily="Stencil" FontSize="14.667" Background="{StaticResource GradientStyle}">
             Выполнить ходов k:
         </TextBlock>
-        <TextBox x:Name = "TextBox" MaxLength="250" TextChanged="TextBox_TextChanged" Width="80" Height="18" VerticalAlignment="Top" HorizontalAlignment = "Left" Margin="1010,280,0,0"/>
+        <TextBox x:Name = "TextBox" MaxLength="250" TextChanged="TextBox_TextChanged" Width="80" Height="18" VerticalAlignment="Top" HorizontalAlignment = "Left" Margin="1010,330,0,0"/>
         <Button x:Name="Do" Content="Выполнить" HorizontalAlignment="Left" Height="32" Margin="1000,750,0,0" VerticalAlignment="Top" Width="100" Background="#FF6273AA" BorderBrush="#FFC1C0E8" FontWeight="Bold" Foreground="White" FontFamily="Stencil" FontSize="14.667" Click="Do_OnClick" Visibility="Collapsed"/>
         
         <TextBlock VerticalAlignment="Top" HorizontalAlignment = "Left" Margin="860,200,0,0" FontWeight="Bold" Foreground="White" FontFamily="Stencil" FontSize="14.667" Background="{StaticResource GradientStyle}">
-            Количество требуемых для выживания 
+            Количество требуемых для зарождения 
             <LineBreak />
-            соседей n:
+            жизни соседей: n =
             <LineBreak />
             Клетка продолжает жить если у неё
             <LineBreak />
-            есть n или n-1 соседей.
+            есть n1 = 
+            <LineBreak />
+            <LineBreak />
+            или n2 = 123456789 соседей.
+            <LineBreak />
+            Изначально n = 3, n1 = 2, n2 = 3.
         </TextBlock>
-        <TextBox x:Name = "TextBox1" MaxLength="250" TextChanged="TextBox1_TextChanged" Width="80" Height="22" VerticalAlignment="Top" HorizontalAlignment = "Left" Margin="935,215,0,0"/>
-        
+        <TextBox x:Name = "TextBox1" MaxLength="250" TextChanged="TextBox1_TextChanged" Width="80" Height="22" VerticalAlignment="Top" HorizontalAlignment = "Left" Margin="1000,215,0,0"/>
+        <TextBox x:Name = "TextBox2" MaxLength="250" TextChanged="TextBox2_TextChanged" Width="80" Height="22" VerticalAlignment="Top" HorizontalAlignment = "Left" Margin="925,250,0,0"/>
+        <TextBox x:Name = "TextBox3" MaxLength="250" TextChanged="TextBox3_TextChanged" Width="80" Height="22" VerticalAlignment="Top" HorizontalAlignment = "Left" Margin="925,285,0,0"/>
+
         <Canvas>
             <ListBoxItem x:Name = "Box" Content="Wpf" ToolTip="by Microsoft" Width="90" Height="25" VerticalAlignment="Top" HorizontalAlignment = "Left" Background="{StaticResource GradientStyle}" Canvas.Left="10" Canvas.Top="10" Visibility="Collapsed"/>
         </Canvas>
