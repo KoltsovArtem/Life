@@ -50,8 +50,11 @@
             <Generator>MSBuild:Compile</Generator>
             <SubType>Designer</SubType>
         </ApplicationDefinition>
+        <Compile Include="src\Evolution.cs" />
         <Compile Include="src\Game.cs" />
         <Compile Include="src\InitGame.cs" />
+        <Compile Include="src\Picture.cs" />
+        <Compile Include="src\SLCondition.cs" />
         <Page Include="MainWindow.xaml">
             <Generator>MSBuild:Compile</Generator>
             <SubType>Designer</SubType>
@@ -81,6 +84,10 @@
     </ItemGroup>
     <ItemGroup>
         <None Include="App.config" />
+    </ItemGroup>
+    <ItemGroup>
+      <Content Include="Files\Condition.txt" />
+      <Content Include="Readme.md" />
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
