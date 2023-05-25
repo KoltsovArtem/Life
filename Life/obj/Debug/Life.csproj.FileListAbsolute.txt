@@ -32,3 +32,12 @@ C:\Users\artem\RiderProjects\Life\Life\obj\Debug\Life.exe
 C:\Users\artem\RiderProjects\Life\Life\obj\Debug\Life.pdb
 C:\Users\artem\RiderProjects\Life\Life\obj\Debug\Life_Content.g.cs
 C:\Users\Артём\RiderProjects\Life\Life\obj\Debug\Life_Content.g.cs
+C:\Users\Артём\RiderProjects\Life\Life\bin\Debug\EntityFramework.dll
+C:\Users\Артём\RiderProjects\Life\Life\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Артём\RiderProjects\Life\Life\bin\Debug\System.Data.SQLite.dll
+C:\Users\Артём\RiderProjects\Life\Life\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Users\Артём\RiderProjects\Life\Life\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Users\Артём\RiderProjects\Life\Life\bin\Debug\EntityFramework.xml
+C:\Users\Артём\RiderProjects\Life\Life\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Артём\RiderProjects\Life\Life\bin\Debug\System.Data.SQLite.xml
+C:\Users\Артём\RiderProjects\Life\Life\obj\Debug\Life.csproj.CopyComplete

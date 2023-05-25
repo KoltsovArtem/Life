@@ -117,6 +117,10 @@ namespace Life
                 }
                 File.WriteAllText(@"..\..\Files\Condition.txt", string.Empty);
             }
+            
+            string dbPath = "Database/Life1.sqlite";
+            SQLiteManager dbManager = new SQLiteManager(@"C:\Users\Артём\RiderProjects\Life\Life\Database\Life.sqlite");
+            dbManager.CreateDatabase();
         }
 
         public void stop()
@@ -350,6 +354,17 @@ namespace Life
                 Picture.Load(path, theGrid, arrGen);
             }
 
+            Evolution.evolveOnce(theGrid, new Random());
+        }
+
+        private void SaveDB_OnClick(object sender, RoutedEventArgs e)
+        {
+            SQLiteManager.SaveArray(arrGen);
+        }
+
+        private void LoadDB_OnClick(object sender, RoutedEventArgs e)
+        {
+            SQLiteManager.ReadArray(arrGen, theGrid);
             Evolution.evolveOnce(theGrid, new Random());
         }
     }
